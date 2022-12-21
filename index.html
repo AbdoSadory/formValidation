@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+      <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="assets/style.css">
+            <link rel="stylesheet" href="assets/media.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+      </head>
+
+      <body>
+            <header>
+                  <div class="header-image-container">
+                        <img src="assets/graphic6.svg" class="header-image">
+                  </div>
+                  <div class="header-form-status-container">
+                        <p>We’re Accepting applications!</p>
+                  </div>
+                  <div class="header-form-instructions-container">
+                        <p>Fill the form, attach your latest CV and portfolio to get listed.</p>
+                  </div>
+            </header>
+            <main>
+                  <div class="form-container">
+                        <form id="form" method="post">
+                              <div class="inputs-container">
+                                    <div class="firstName-container input-container">
+                                          <input type="text" name="firstName" id="firstName-input"
+                                                placeholder="first name">
+                                          <div id="fName-error-msg" class="error-msg"></div>
+                                    </div>
+                                    <div class="lastName-container input-container">
+                                          <input type="text" name="lastName" id="lastName-input"
+                                                placeholder="last name">
+                                          <div id="lName-error-msg" class="error-msg"></div>
+                                    </div>
+
+                              </div>
+                              <div class="inputs-container">
+                                    <div class="email-container input-container">
+                                          <input type="email" name="email" id="email-input"
+                                                placeholder="e-mail address">
+                                          <div id="email-error-msg" class="error-msg"></div>
+                                    </div>
+
+                                    <div class="phone-container input-container">
+                                          <input type="number" name="phone" id="phone-input" placeholder="phone number"
+                                                minlength="9" maxlength="12">
+                                          <div id="phone-error-msg" class="error-msg"></div>
+                                    </div>
+
+                              </div>
+                              <div class="inputs-container">
+
+                                    <div class="select-container">
+                                          <select name="country" id="country-select">
+                                                <option hidden>country</option>
+                                                <option value="EGY">egypt</option>
+                                                <option value="USA">united states</option>
+                                                <option value="ENG">england</option>
+                                          </select>
+
+                                          <div id="country-error-msg" class="error-msg"></div>
+                                    </div>
+
+                              </div>
+                              <div class="inputs-container">
+
+                                    <div class="about-container">
+                                          <textarea name="about" id="about-textarea"
+                                                placeholder="tell us about yourself" rows="10" minlength="10"
+                                                maxlength="100"></textarea>
+                                          <div id="about-error-msg" class="error-msg"></div>
+                                    </div>
+
+                              </div>
+                              <div class="inputs-container">
+                                    <div class="cv-container input-container">
+                                          <div class="file-container">
+                                                <input type="file" name="cv" id="cv-input">
+                                                <label for="cv-input">CV (Resume)</label>
+                                          </div>
+                                          <div id="cv-error-msg" class="error-msg"></div>
+                                    </div>
+                                    <div class="other-container input-container">
+                                          <div class="file-container">
+                                                <input type="file" name="other" id="other-input">
+                                                <label for="other-input">Other attachments</label>
+                                          </div>
+                                          <div id="other-error-msg" class="error-msg"></div>
+                                    </div>
+                              </div>
+                              <div class="inputs-container agreement-submit-container">
+                                    <div class="agreement-container">
+                                          <input type="checkbox" id="agreement-checkbox">
+                                          <label>I agree on <a href="#" class="terms-link">terms & conditions</a> of
+                                                form</label>
+                                          <div id="agreement-error-msg" class="error-msg"></div>
+                                    </div>
+                                    <div class="submit-container">
+                                          <button type="submit">submit application</button>
+                                    </div>
+                              </div>
+                              <div id="submit-msg" class="success-msg"></div>
+                        </form>
+                  </div>
+            </main>
+            <script src="assets/script.js"></script>
+
+      </body>
+
+</html>

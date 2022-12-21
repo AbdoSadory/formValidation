@@ -1,0 +1,23 @@
+@media (max-width: 992px) {
+  .inputs-container {
+    flex-direction: column;
+    margin-bottom: unset;
+  }
+  .input-container {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  select,
+  textarea {
+    margin-bottom: 15px;
+  }
+  .agreement-container,
+  .submit-container {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  .agreement-submit-container {
+    margin-top: 25px;
+  }
+}
