@@ -8,7 +8,7 @@ const email = document.getElementById("email-input");
 const emailErrorMsg = document.getElementById("email-error-msg");
 const phone = document.getElementById("phone-input");
 const phoneErrorMsg = document.getElementById("phone-error-msg");
-const countrySelect = document.getElementById("country-select");
+let chosenCountry = "";
 const countrySelectErrorMsg = document.getElementById("country-error-msg");
 const aboutTextarea = document.getElementById("about-textarea");
 const aboutTextareaErrorMsg = document.getElementById("about-error-msg");
@@ -51,7 +51,7 @@ form.addEventListener("submit", (event) => {
 });
 
 const firstNameValidation = () => {
-  if (firstName.value.length > 3 && firstName.value.length < 10) {
+  if (firstName.value.length >= 3 && firstName.value.length <= 10) {
     firstNameErrorMsg.innerText = "";
     firstNameErrorMsg.style.display = "none";
     return "valid";
@@ -64,7 +64,7 @@ const firstNameValidation = () => {
 };
 
 const lastNameValidation = () => {
-  if (lastName.value.length > 3 && lastName.value.length < 10) {
+  if (lastName.value.length >= 3 && lastName.value.length <= 10) {
     lastNameErrorMsg.innerText = "";
     lastNameErrorMsg.style.display = "none";
     return "valid";
@@ -77,7 +77,7 @@ const lastNameValidation = () => {
 };
 
 const phoneValidation = () => {
-  if (phone.value.length > 9 && phone.value.length < 12) {
+  if (phone.value.length >= 9 && phone.value.length <= 12) {
     phoneErrorMsg.innerText = "";
     phoneErrorMsg.style.display = "none";
     return "valid";
@@ -102,8 +102,20 @@ const emailValidation = () => {
   }
 };
 
+const chooseCountry = (selectedCountry) => {
+  const selectedCountryElement = document.getElementById("selectedCountry");
+  chosenCountry = selectedCountry.innerText;
+  const countriesOptions = document.getElementsByClassName("country");
+  for (const country of countriesOptions) {
+    country.classList.remove("active");
+  }
+  selectedCountry.classList.toggle("active");
+  selectedCountryElement.innerText = chosenCountry;
+  console.log(chosenCountry);
+};
+
 const countryValidation = () => {
-  if (!countrySelect.value || countrySelect.value === "country") {
+  if (!chosenCountry) {
     let msg = "invalid input, You must select country";
     countrySelectErrorMsg.innerText = msg;
     countrySelectErrorMsg.style.display = "block";

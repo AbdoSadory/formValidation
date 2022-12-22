@@ -56,12 +56,29 @@
                               <div class="inputs-container">
 
                                     <div class="select-container">
-                                          <select name="country" id="country-select">
+                                          <div class="wrapper">
+                                                <div class="select-btn">
+                                                      <span id="selectedCountry">Select Country</span>
+                                                      <img src="assets/arrow-down-solid.svg" alt="arrow">
+                                                </div>
+                                                <div class="content">
+                                                      <ul class="options">
+                                                            <li onclick="chooseCountry(this)" id="egy" class="country">
+                                                                  egypt</li>
+                                                            <li onclick="chooseCountry(this)" id="usa" class="country">
+                                                                  united states
+                                                            </li>
+                                                            <li onclick="chooseCountry(this)" id="eng" class="country">
+                                                                  england</li>
+                                                      </ul>
+                                                </div>
+                                          </div>
+                                          <!-- <select name="country" id="country-select">
                                                 <option hidden>country</option>
                                                 <option value="EGY">egypt</option>
                                                 <option value="USA">united states</option>
                                                 <option value="ENG">england</option>
-                                          </select>
+                                          </select> -->
 
                                           <div id="country-error-msg" class="error-msg"></div>
                                     </div>

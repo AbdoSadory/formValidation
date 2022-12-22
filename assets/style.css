@@ -97,10 +97,57 @@ textarea:focus {
   border: 1px solid var(--gray);
   text-transform: capitalize;
 }
+#email-input {
+  text-transform: unset;
+}
 .select-container,
 .about-container {
   width: 100%;
 }
+.wrapper {
+  position: relative;
+}
+.content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  transition: unset !important;
+}
+.wrapper:hover .content {
+  visibility: visible;
+}
+.select-btn {
+  padding: 15px;
+  border: 1px solid var(--gray);
+  text-transform: capitalize;
+  border-radius: 5px;
+  position: relative;
+}
+.select-btn:hover {
+  border-color: var(--blue);
+}
+.select-btn img {
+  width: 15px;
+  position: absolute;
+  right: 15px;
+  top: 35%;
+}
+.options {
+  list-style: none;
+}
+.country {
+  padding: 15px;
+  background-color: #eee;
+  text-transform: capitalize;
+}
+.country:hover,
+.active {
+  background-color: var(--blue);
+  color: white;
+}
+
 select {
   width: 100%;
   border-radius: 5px;
