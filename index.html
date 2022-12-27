@@ -29,39 +29,38 @@
                               <div class="inputs-container">
                                     <div class="firstName-container input-container">
                                           <input type="text" name="firstName" id="firstName-input"
-                                                placeholder="first name">
+                                                placeholder="first name" onblur="firstNameValidation()">
                                           <div id="fName-error-msg" class="error-msg"></div>
                                     </div>
                                     <div class="lastName-container input-container">
-                                          <input type="text" name="lastName" id="lastName-input"
-                                                placeholder="last name">
+                                          <input type="text" name="lastName" id="lastName-input" placeholder="last name"
+                                                onblur="lastNameValidation()">
                                           <div id="lName-error-msg" class="error-msg"></div>
                                     </div>
 
                               </div>
                               <div class="inputs-container">
                                     <div class="email-container input-container">
-                                          <input type="email" name="email" id="email-input"
-                                                placeholder="e-mail address">
+                                          <input type="email" name="email" id="email-input" placeholder="e-mail address"
+                                                onblur="emailValidation()">
                                           <div id="email-error-msg" class="error-msg"></div>
                                     </div>
 
                                     <div class="phone-container input-container">
                                           <input type="number" name="phone" id="phone-input" placeholder="phone number"
-                                                minlength="9" maxlength="12">
+                                                minlength="9" maxlength="12" onblur="phoneValidation()">
                                           <div id="phone-error-msg" class="error-msg"></div>
                                     </div>
 
                               </div>
                               <div class="inputs-container">
-
                                     <div class="select-container">
-                                          <div class="wrapper">
+                                          <div class="wrapper" id="wrapper">
                                                 <div class="select-btn">
                                                       <span id="selectedCountry">Select Country</span>
                                                       <img src="assets/arrow-down-solid.svg" alt="arrow">
                                                 </div>
-                                                <div class="content">
+                                                <div class="content" id="content">
                                                       <ul class="options">
                                                             <li onclick="chooseCountry(this)" id="egy" class="country">
                                                                   egypt</li>
@@ -73,13 +72,6 @@
                                                       </ul>
                                                 </div>
                                           </div>
-                                          <!-- <select name="country" id="country-select">
-                                                <option hidden>country</option>
-                                                <option value="EGY">egypt</option>
-                                                <option value="USA">united states</option>
-                                                <option value="ENG">england</option>
-                                          </select> -->
-
                                           <div id="country-error-msg" class="error-msg"></div>
                                     </div>
 
@@ -89,7 +81,7 @@
                                     <div class="about-container">
                                           <textarea name="about" id="about-textarea"
                                                 placeholder="tell us about yourself" rows="10" minlength="10"
-                                                maxlength="100"></textarea>
+                                                maxlength="100" onblur="aboutValidation()"></textarea>
                                           <div id="about-error-msg" class="error-msg"></div>
                                     </div>
 
@@ -97,14 +89,15 @@
                               <div class="inputs-container">
                                     <div class="cv-container input-container">
                                           <div class="file-container">
-                                                <input type="file" name="cv" id="cv-input">
+                                                <input type="file" name="cv" id="cv-input" accept="application/pdf">
                                                 <label for="cv-input">CV (Resume)</label>
                                           </div>
                                           <div id="cv-error-msg" class="error-msg"></div>
                                     </div>
                                     <div class="other-container input-container">
                                           <div class="file-container">
-                                                <input type="file" name="other" id="other-input">
+                                                <input type="file" name="other" id="other-input"
+                                                      accept="application/pdf">
                                                 <label for="other-input">Other attachments</label>
                                           </div>
                                           <div id="other-error-msg" class="error-msg"></div>
@@ -112,7 +105,7 @@
                               </div>
                               <div class="inputs-container agreement-submit-container">
                                     <div class="agreement-container">
-                                          <input type="checkbox" id="agreement-checkbox">
+                                          <input type="checkbox" id="agreement-checkbox" onblur="agreementValidation()">
                                           <label>I agree on <a href="#" class="terms-link">terms & conditions</a> of
                                                 form</label>
                                           <div id="agreement-error-msg" class="error-msg"></div>

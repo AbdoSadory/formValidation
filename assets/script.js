@@ -20,7 +20,13 @@ const checkAgreement = document.getElementById("agreement-checkbox");
 const checkAgreementErrorMsg = document.getElementById("agreement-error-msg");
 const submitMsg = document.getElementById("submit-msg");
 const fileValidationRegEx = /(\.pdf)$/gi;
-
+const selectWrapper = document.getElementById("wrapper");
+selectWrapper.addEventListener("click", () => {
+  const content = document.getElementById("content");
+  content.style.visibility === "visible"
+    ? (content.style.visibility = "hidden")
+    : (content.style.visibility = "visible");
+});
 form.addEventListener("submit", (event) => {
   let fnameValidationState = firstNameValidation();
   let lnameValidationState = lastNameValidation();

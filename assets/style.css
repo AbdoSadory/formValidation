@@ -115,9 +115,9 @@ textarea:focus {
   visibility: hidden;
   transition: unset !important;
 }
-.wrapper:hover .content {
+/* .wrapper:hover .content {
   visibility: visible;
-}
+} */
 .select-btn {
   padding: 15px;
   border: 1px solid var(--gray);
